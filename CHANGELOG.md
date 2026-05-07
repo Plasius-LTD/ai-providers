@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+- **Added**
+  - (placeholder)
+
+- **Changed**
+  - (placeholder)
+
+- **Fixed**
+  - (placeholder)
+
+- **Security**
+  - (placeholder)
+
+## [0.1.0] - 2026-05-07
+
 - Added initial public package scaffold with governance, legal, docs, build, test, and pack-check baselines.
 - Added provider descriptors, cost/cache/privacy/SLO metadata contracts, registry selection, readiness diagnostics, and deterministic fake provider adapters.
 - Added the `@plasius/ai-config` runtime dependency for shared provider configuration and data-policy contracts.
+
+
+[0.1.0]: https://github.com/Plasius-LTD/ai-providers/releases/tag/v0.1.0
