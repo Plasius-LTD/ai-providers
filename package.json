@@ -60,6 +60,9 @@
     "url": "https://github.com/Plasius-LTD/ai-providers/issues"
   },
   "homepage": "https://github.com/Plasius-LTD/ai-providers#readme",
+  "dependencies": {
+    "@plasius/ai-config": "^0.1.0"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",

@@ -7,3 +7,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 - Added initial public package scaffold with governance, legal, docs, build, test, and pack-check baselines.
+- Added provider descriptors, cost/cache/privacy/SLO metadata contracts, registry selection, readiness diagnostics, and deterministic fake provider adapters.
+- Added the `@plasius/ai-config` runtime dependency for shared provider configuration and data-policy contracts.
