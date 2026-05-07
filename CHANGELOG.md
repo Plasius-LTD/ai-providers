@@ -13,7 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Fixed**
-  - (placeholder)
+  - Extended CD public npm visibility verification to tolerate slower registry propagation after first publish.
 
 - **Security**
   - (placeholder)

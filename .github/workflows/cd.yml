@@ -254,7 +254,7 @@ jobs:
 
           PUBLIC_NPMRC="$(mktemp)"
           PUBLIC_CACHE="$(mktemp -d)"
-          for attempt in 1 2 3 4 5 6; do
+          for attempt in $(seq 1 30); do
             if npm view "${PACKAGE_NAME}@${PACKAGE_VERSION}" version \
               --registry https://registry.npmjs.org \
               --userconfig "${PUBLIC_NPMRC}" \
@@ -262,6 +262,7 @@ jobs:
               echo "Verified public npm package ${PACKAGE_NAME}@${PACKAGE_VERSION}."
               exit 0
             fi
+            echo "Public npm package ${PACKAGE_NAME}@${PACKAGE_VERSION} is not visible yet; retry ${attempt}/30."
             sleep 10
           done
 
