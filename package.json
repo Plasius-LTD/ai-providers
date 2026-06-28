@@ -1,6 +1,6 @@
 {
   "name": "@plasius/ai-providers",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Provider adapter contracts and implementations for the Plasius agentic AI package family.",
   "type": "module",
   "sideEffects": false,
