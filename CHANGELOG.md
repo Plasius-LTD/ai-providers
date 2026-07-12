@@ -10,6 +10,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Changed**
+  - (placeholder)
+
+- **Fixed**
+  - (placeholder)
+
+- **Security**
+  - (placeholder)
+
+## [0.1.9] - 2026-07-12
+
+- **Added**
+  - (placeholder)
+
+- **Changed**
   - Refreshed the lockfile to consume `@plasius/ai-config@0.1.8` and the latest stable compatible development toolchain releases.
 
 - **Fixed**
@@ -117,3 +131,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 [0.1.6]: https://github.com/Plasius-LTD/ai-providers/releases/tag/v0.1.6
 [0.1.7]: https://github.com/Plasius-LTD/ai-providers/releases/tag/v0.1.7
 [0.1.8]: https://github.com/Plasius-LTD/ai-providers/releases/tag/v0.1.8
+[0.1.9]: https://github.com/Plasius-LTD/ai-providers/releases/tag/v0.1.9
