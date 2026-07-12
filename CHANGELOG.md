@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Changed**
-  - (placeholder)
+  - Refreshed the lockfile to consume `@plasius/ai-config@0.1.8` and the latest stable compatible development toolchain releases.
 
 - **Fixed**
   - (placeholder)
