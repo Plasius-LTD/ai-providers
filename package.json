@@ -61,7 +61,8 @@
   },
   "homepage": "https://github.com/Plasius-LTD/ai-providers#readme",
   "dependencies": {
-    "@plasius/ai-config": "^0.1.7"
+    "@plasius/ai-config": "^0.1.7",
+    "@plasius/asset-contracts": "^0.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -6,6 +6,8 @@ import type {
   AiResolvedProviderConfig,
 } from "@plasius/ai-config";
 
+export * from "./model-search-rankers.js";
+
 export type {
   AiDataClass,
   AiProviderCapability,

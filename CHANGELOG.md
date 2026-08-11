@@ -7,15 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ## [Unreleased]
 
 - **Added**
+  - Added immutable, explicitly allowlisted model-search ranker descriptors, exact registry selection, safe readiness projections, package-enforced deadline/cancellation invocation, strict output contracts, and deterministic ready/unavailable/throwing/cancelled/malformed fakes.
   - (placeholder)
 
 - **Changed**
+  - Added `@plasius/asset-contracts@^0.2.0` as the canonical model request, resource, evidence-mode, and assurance contract dependency.
   - (placeholder)
 
 - **Fixed**
+  - Rejected sparse/accessor or overridden-iteration contract inputs, bound adapter registrations, correlated explicit request rankers and candidate preview resources, rejected forged adapter substitutions before invocation, snapshotted mutable adapters without mutating caller input, and made non-substitution explicit in every selection result.
   - (placeholder)
 
 - **Security**
+  - Restricted ranker preview evidence to canonical MCP PNG resources and rejected direct URLs or common sensitive key/value assignments from public descriptor display metadata.
   - (placeholder)
 
 ## [0.1.9] - 2026-07-12
