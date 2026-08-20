@@ -3,7 +3,7 @@ import {
   MODEL_RANKER_EVIDENCE_MODES,
   UNIFIED_ASSET_PIPELINE_FEATURE_FLAG_ID,
   assertAssetId,
-  assertAssetVersion,
+  assertImmutableAssetVersion,
   createModelRequestSpec,
   createModelResourceRef,
   type ModelMatchAssurance,
@@ -839,7 +839,7 @@ function assertCandidatePreviewResourceScope(
     (segments[4] === "previews" || segments[4] === "views");
   if (catalogVersionPreviewShape) {
     assertAssetId(candidateId);
-    assertAssetVersion(segments[3]);
+    assertImmutableAssetVersion(segments[3]);
     return;
   }
   const stagedCandidatePreview =

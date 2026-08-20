@@ -11,15 +11,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Changed**
-  - Added `@plasius/asset-contracts@^0.2.0` as the canonical model request, resource, evidence-mode, and assurance contract dependency.
+  - Added `@plasius/asset-contracts@^0.3.1` as the canonical model request, resource, evidence-mode, assurance, and immutable asset-version contract dependency.
   - (placeholder)
 
 - **Fixed**
   - Rejected sparse/accessor or overridden-iteration contract inputs, bound adapter registrations, correlated explicit request rankers and candidate preview resources, rejected forged adapter substitutions before invocation, snapshotted mutable adapters without mutating caller input, and made non-substitution explicit in every selection result.
+  - Rejected moving catalog-version aliases and wildcard labels while retaining valid exact catalog versions and staged-resolution preview evidence.
   - (placeholder)
 
 - **Security**
   - Restricted ranker preview evidence to canonical MCP PNG resources and rejected direct URLs or common sensitive key/value assignments from public descriptor display metadata.
+  - Bound catalog preview evidence to the canonical immutable asset-version validator.
   - (placeholder)
 
 ## [0.1.9] - 2026-07-12

@@ -294,6 +294,24 @@ describe("model-search ranker contracts", () => {
         ],
       })
     ).toThrow(/version|immutable|scoped/i);
+    for (const version of ["latest", "PrOdUcTiOn", "v1.x"]) {
+      expect(() =>
+        createModelSearchRankerInvocation({
+          ...valid,
+          candidates: [
+            {
+              ...candidate("chair-a", HASH_A),
+              previewResources: [
+                {
+                  ...candidate("chair-a", HASH_A).previewResources[0],
+                  uri: `mcp://models/catalog/chair-a/versions/${version}/previews/isometric.png`,
+                },
+              ],
+            },
+          ],
+        })
+      ).toThrow(/version|immutable/i);
+    }
     expect(() =>
       createModelSearchRankerInvocation({
         ...valid,
