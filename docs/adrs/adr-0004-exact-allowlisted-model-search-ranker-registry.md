@@ -1,4 +1,4 @@
-# ADR-0003: Exact Allowlisted Model-search Ranker Registry
+# ADR-0004: Exact Allowlisted Model-search Ranker Registry
 
 - Date: 2026-07-13
 - Status: Accepted

@@ -1,5 +1,13 @@
 # @plasius/ai-providers
 
+[![npm version](https://img.shields.io/npm/v/@plasius/ai-providers.svg)](https://www.npmjs.com/package/@plasius/ai-providers)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Plasius-LTD/ai-providers/ci.yml?branch=main&label=build&style=flat)](https://github.com/Plasius-LTD/ai-providers/actions/workflows/ci.yml)
+[![coverage](https://img.shields.io/codecov/c/github/Plasius-LTD/ai-providers)](https://codecov.io/gh/Plasius-LTD/ai-providers)
+[![License](https://img.shields.io/github/license/Plasius-LTD/ai-providers)](./LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-yes-blue.svg)](./CODE_OF_CONDUCT.md)
+[![Security Policy](https://img.shields.io/badge/security%20policy-yes-orange.svg)](./SECURITY.md)
+[![Changelog](https://img.shields.io/badge/changelog-md-blue.svg)](./CHANGELOG.md)
+
 Provider adapter contracts and implementations for the Plasius agentic AI package family.
 
 ## Scope
@@ -182,3 +190,17 @@ npm run pack:check
 ## License
 
 Apache-2.0
+<!-- BEGIN PLASIUS RELEASE INTEGRITY -->
+## Release integrity
+
+Production package publication runs only from `.github/workflows/cd.yml` on
+protected `main`. The job verifies that the prepared commit is still the
+current main commit and has an exact successful `ci.yml` push result before it
+mutates release state. Public package CI delegates to the repository-owned
+`.github/workflows/ci-hosted.yml` at the same reviewed revision, runs on explicit
+GitHub-hosted capacity with package-manager caching disabled, and rejects fork
+pull requests at both workflow boundaries. npm publication remains isolated on
+GitHub-hosted Node.js 24 with pinned npm 11.6.2, uses the protected `production` environment and
+short-lived npm OIDC with provenance, and has no long-lived npm write-token
+fallback. Rollback disables CD; it never rewrites published package history.
+<!-- END PLASIUS RELEASE INTEGRITY -->

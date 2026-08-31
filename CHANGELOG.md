@@ -12,6 +12,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - **Changed**
   - Added `@plasius/asset-contracts@^0.3.1` as the canonical model request, resource, evidence-mode, assurance, and immutable asset-version contract dependency.
+  - Restored exact-main npm publication on a GitHub-hosted runner through
+    short-lived OIDC, with an enforced Node/npm runtime and no long-lived
+    write-token fallback.
+  - Routed same-repository package CI through an exact-revision hosted reusable
+    workflow with package-manager caching disabled, duplicate fork guards, and
+    a public-package integrity check. Fork pull requests remain excluded.
   - (placeholder)
 
 - **Fixed**
