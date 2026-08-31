@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Changed**
+  - Raised the runtime `@plasius/ai-config` baseline to `^0.1.9` and refreshed the compatible development toolchain.
   - Added `@plasius/asset-contracts@^0.3.1` as the canonical model request, resource, evidence-mode, assurance, and immutable asset-version contract dependency.
   - Restored exact-main npm publication on a GitHub-hosted runner through
     short-lived OIDC, with an enforced Node/npm runtime and no long-lived
