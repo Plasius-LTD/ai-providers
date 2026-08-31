@@ -607,8 +607,8 @@ export async function invokeModelSearchRanker(
   if (signal?.aborted === true) {
     throw createAbortError("Model-search ranker invocation was cancelled.");
   }
-  const now = Date.now();
-  if (invocation.deadlineEpochMs <= now) {
+  const initialNow = Date.now();
+  if (invocation.deadlineEpochMs <= initialNow) {
     throw createDeadlineError();
   }
   const readiness = readAdapterReadiness(
@@ -625,11 +625,15 @@ export async function invokeModelSearchRanker(
     );
   }
 
+  const executionStartedAt = Date.now();
+  if (invocation.deadlineEpochMs <= executionStartedAt) {
+    throw createDeadlineError();
+  }
   const effectiveDurationMs = Math.min(
-    invocation.deadlineEpochMs - now,
+    invocation.deadlineEpochMs - executionStartedAt,
     MODEL_SEARCH_RANKER_MAX_EXECUTION_MS
   );
-  const effectiveDeadlineEpochMs = now + effectiveDurationMs;
+  const effectiveDeadlineEpochMs = executionStartedAt + effectiveDurationMs;
   const executionController = new AbortController();
   let rejectBoundary: (reason: Error) => void = () => undefined;
   const boundary = new Promise<never>((_resolve, reject) => {

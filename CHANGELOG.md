@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Fixed**
-  - Rejected sparse/accessor or overridden-iteration contract inputs, bound adapter registrations, correlated explicit request rankers and candidate preview resources, rejected forged adapter substitutions before invocation, snapshotted mutable adapters without mutating caller input, and made non-substitution explicit in every selection result.
+  - Rejected sparse/accessor or overridden-iteration contract inputs, bound adapter registrations, correlated explicit request rankers and candidate preview resources, rejected forged adapter substitutions before invocation, snapshotted mutable adapters without mutating caller input, made non-substitution explicit in every selection result, and rechecked invocation deadlines after adapter readiness work.
   - Rejected moving catalog-version aliases and wildcard labels while retaining valid exact catalog versions and staged-resolution preview evidence.
   - (placeholder)
 

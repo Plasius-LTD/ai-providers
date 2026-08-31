@@ -853,6 +853,55 @@ describe("model-search ranker contracts", () => {
     ).rejects.toMatchObject({ name: "AbortError" });
   });
 
+  it("does not invoke an adapter after readiness exhausts the deadline", async () => {
+    const now = vi.spyOn(Date, "now").mockReturnValueOnce(1_000).mockReturnValue(2_001);
+    let rankCalls = 0;
+    const adapter: ModelSearchRankerAdapter = {
+      descriptor: baseDescriptor(),
+      readiness: () => ({
+        status: "ready",
+        rankerId: "catalog-multimodal-v1",
+      }),
+      rank: async (invocation) => {
+        rankCalls += 1;
+        return {
+          invocationId: invocation.invocationId,
+          rankerId: "catalog-multimodal-v1",
+          scores: invocation.candidates.map(({ candidateId }) => ({
+            candidateId,
+            score: 0.8,
+          })),
+        };
+      },
+    };
+    const registry = createModelSearchRankerRegistry({
+      allowlistedRankerIds: ["catalog-multimodal-v1"],
+      defaultRankerId: "catalog-multimodal-v1",
+      adapters: [adapter],
+    });
+    const selection = registry.resolve();
+    if (selection.status !== "selected") {
+      throw new Error("Expected selected test ranker.");
+    }
+
+    try {
+      await expect(
+        invokeModelSearchRanker(
+          selection,
+          createModelSearchRankerInvocation({
+            invocationId: "rank-call-readiness-deadline",
+            request: request("catalog-multimodal-v1"),
+            candidates: [candidate("chair-a", HASH_A)],
+            deadlineEpochMs: 2_000,
+          })
+        )
+      ).rejects.toMatchObject({ code: "ranker-deadline-exceeded" });
+      expect(rankCalls).toBe(0);
+    } finally {
+      now.mockRestore();
+    }
+  });
+
   it("enforces cancellation and the bounded deadline around non-cooperative adapters", async () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date("2030-01-01T00:00:00.000Z"));
