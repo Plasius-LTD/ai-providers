@@ -43,6 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   - (placeholder)
 
 - **Security**
+  - Refreshed the lockfile and pinned `esbuild` to a patched release for the development toolchain.
   - (placeholder)
 
 ## [0.1.8] - 2026-06-28
