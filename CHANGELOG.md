@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+- Refresh compatible npm dependencies and published Plasius dependency resolutions for the weekly security maintenance batch (2026-09-27).
+
 - **Added**
   - Added immutable, explicitly allowlisted model-search ranker descriptors, exact registry selection, safe readiness projections, package-enforced deadline/cancellation invocation, strict output contracts, and deterministic ready/unavailable/throwing/cancelled/malformed fakes.
   - (placeholder)
