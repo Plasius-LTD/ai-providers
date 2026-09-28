@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+- Refresh npm dependency lockfile to current supported stable versions (weekly maintenance, 2026-09-28). Refresh published Plasius package baselines after upstream releases.
+
 - **Added**
   - Added immutable, explicitly allowlisted model-search ranker descriptors, exact registry selection, safe readiness projections, package-enforced deadline/cancellation invocation, strict output contracts, and deterministic ready/unavailable/throwing/cancelled/malformed fakes.
   - (placeholder)
